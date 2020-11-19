@@ -43,7 +43,7 @@ class CardGui {
         this.cards_array = card.getCard();
         this.singleCard = "";
         this.allCard = "";
-        this.row = 6;
+        this.row = 5;
         this.rowwidth=this.row*53;
         this.col = (this.cards_array[0].length / this.row) + (this.cards_array[0].length % this.row === 0);
         this.addAll();
@@ -112,6 +112,8 @@ console.log(card.getCard()[0]);
 
 
 window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById("showResult").innerHTML = "Guess a Number Below "+card.maxlimit+", select the Card which contain the number";
+    $("#myModal").modal();
     document.getElementById("game_div").innerHTML = html.getHTML();
     selectedCards = [];
     for (let i = 0; i < number_of_cards; i++) {
